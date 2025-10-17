@@ -527,7 +527,7 @@ jobs:
         run: |
           cd "$CONFIG"
           echo "Adding BBG..."
-          curl -sSL https://github.com/vc-teahouse/Baseband-guard/raw/refs/heads/stable/setup.sh -o setup.sh
+          curl -sSL https://github.com/vc-teahouse/Baseband-guard/raw/main/setup.sh -o setup.sh
           bash setup.sh || true
           echo "CONFIG_BBG=y" >> common/arch/arm64/configs/gki_defconfig
           
