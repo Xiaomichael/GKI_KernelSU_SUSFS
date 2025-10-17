@@ -527,8 +527,8 @@ jobs:
         run: |
           cd "$CONFIG"
           echo "Adding BBG..."
-          curl -sSL https://github.com/zzh20188/Baseband-guard/raw/refs/heads/stable/setup.sh -o setup.sh
-          bash setup.sh stable || true
+          curl -sSL https://github.com/vc-teahouse/Baseband-guard/raw/refs/heads/stable/setup.sh -o setup.sh
+          bash setup.sh || true
           echo "CONFIG_BBG=y" >> common/arch/arm64/configs/gki_defconfig
           
           if [ "${{ inputs.kernel_version }}" = "5.10" ]; then
